@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".client.inactiviteit.InactiviteitFragment"
+    android:name="androidx.navigation.fragment.NavHostFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/empty_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Nog geen informatie"
+            android:visibility="gone" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="509dp"
+            android:scrollbars="vertical"
+            android:scrollingCache="true"
+            android:stateListAnimator="@null"
+            tools:layout_editor_absoluteX="411dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <TextView
+            android:id="@+id/totaaltijdHeader"
+            android:layout_width="207dp"
+            android:layout_height="33dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="24dp"
+            android:text="Totaal tijd"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recyclerView" />
+
+        <TextView
+            android:id="@+id/totaaltimeTV"
+            android:layout_width="168dp"
+            android:layout_height="27dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="4dp"
+            android:text="TextView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/totaaltijdHeader" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

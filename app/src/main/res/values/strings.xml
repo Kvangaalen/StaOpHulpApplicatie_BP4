@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">ASH-APP</string>
+    <string name="title_activity_client">ClientActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">ASH</string>
+    <string name="nav_header_subtitle">Cliëntportaal</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Instellingen</string>
+    <string name="action_about">Over ASH</string>
+    <string name="menu_inactiviteit">Mijn Inactiviteit</string>
+    <string name="menu_hulpmiddelen">Mijn Hulpmiddelen</string>
+    <string name="menu_zorgpersoneel">Mijn Zorgpersoneel</string>
+    <string name="menu_instellingen">App Instellingen</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+
+    <string name="btnOpslaan">Opslaan</string>
+    <string name="btnStop">Stop</string>
+    <string name="tvNaam">Naam</string>
+    <string name="tvPersoneelnummer">Personeelnummer</string>
+    <string name="tvClientnummer">Cliëntnummer</string>
+
+    <string name="toegangcode">Toegangcode</string>
+    <string name="geboortedatum">Geboortedatum</string>
+
+    <string name="NoDataVerzoek">Er zijn geen nieuwe inzageverzoeken</string>
+    <string name="NoDataHulpmiddel">U heeft nog geen hulpmiddel toegevoegd</string>
+    <string name="NoDataZorgpersoneel">U heeft nog geen gekoppelde zorgverleners</string>
+    <string name="NoDataInactiviteitClient">De cliënt heeft nog geen zit activiteiten</string>
+
+
+
+</resources>

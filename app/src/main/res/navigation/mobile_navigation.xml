@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_inactiviteit">
+
+    <fragment
+        android:id="@+id/nav_inactiviteit"
+        android:name="com.example.sta_op_hulp.client.inactiviteit.InactiviteitFragment"
+        android:label="@string/menu_inactiviteit"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_inactiviteit_to_blankFragment"
+            app:destination="@id/blankFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_hulpmiddelen"
+        android:name="com.example.sta_op_hulp.client.hulpmiddelen.Hulpmiddelenragment"
+        android:label="@string/menu_hulpmiddelen"
+        tools:layout="@layout/fragment_hulpmiddelen" >
+        <action
+            android:id="@+id/action_nav_hulpmiddelen_to_editHulpmiddelFragment"
+            app:destination="@id/editHulpmiddelFragment" />
+        <action
+            android:id="@+id/action_nav_hulpmiddelen_self"
+            app:destination="@id/nav_hulpmiddelen" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_zorgpersoneel"
+        android:name="com.example.sta_op_hulp.client.zorgpersoneel.ZorgpersoneelFragment"
+        android:label="@string/menu_zorgpersoneel"
+        tools:layout="@layout/fragment_overzichtverpleegkundige" >
+        <action
+            android:id="@+id/action_nav_zorgpersoneel_to_viewRequestFragment"
+            app:destination="@id/viewRequestFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/blankFragment"
+        android:name="com.example.sta_op_hulp.client.settings.ClientSettingFragment"
+        android:label="@string/menu_instellingen"
+        tools:layout="@layout/fragment_settingclient" >
+        <action
+            android:id="@+id/action_blankFragment_to_nav_inactiviteit"
+            app:destination="@id/nav_inactiviteit" />
+    </fragment>
+    <fragment
+        android:id="@+id/viewRequestFragment"
+        android:name="com.example.sta_op_hulp.client.zorgpersoneel.ViewRequestFragment"
+        android:label="Inzageverzoek Zorgpersoneel"
+        tools:layout="@layout/fragment_view_request" >
+        <action
+            android:id="@+id/action_viewRequestFragment_to_nav_zorgpersoneel"
+            app:destination="@id/nav_zorgpersoneel" />
+        <action
+            android:id="@+id/action_viewRequestFragment_to_mangeRequestFragment"
+            app:destination="@id/mangeRequestFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mangeRequestFragment"
+        android:name="com.example.sta_op_hulp.client.zorgpersoneel.MangeRequestFragment"
+        android:label="Inzageverzoek Beheren"
+        tools:layout="@layout/fragment_mange_request" >
+        <argument
+            android:name="zorgpersoneelclient"
+            app:argType="com.example.sta_op_hulp.Model.ZorgpersoneelClient" />
+        <action
+            android:id="@+id/action_mangeRequestFragment_to_nav_zorgpersoneel"
+            app:destination="@id/nav_zorgpersoneel" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/editHulpmiddelFragment"
+        android:name="com.example.sta_op_hulp.client.hulpmiddelen.EditHulpmiddelFragment"
+        android:label="Bewerken hulpmiddel"
+        tools:layout="@layout/fragment_edit_hulpmiddel" />
+
+    <activity
+        android:id="@+id/addClient"
+        android:name="com.example.sta_op_hulp.zorgpersoneel.client.addClient"
+        android:label="activity_add_client"
+        tools:layout="@layout/activity_add_client"
+        />
+    <activity
+        android:id="@+id/clientActivity"
+        android:name="com.example.sta_op_hulp.ClientActivity"
+        android:label="app_bar_client"
+        tools:layout="@layout/app_bar_client" />
+    <activity
+        android:id="@+id/clientinactiviteitoverzicht"
+        android:name="com.example.sta_op_hulp.zorgpersoneel.inactiviteitClient.clientinactiviteitoverzicht"
+        android:label="client inactiviteitoverzicht"
+        tools:layout="@layout/activity_clientinactiviteitoverzicht" />
+</navigation>

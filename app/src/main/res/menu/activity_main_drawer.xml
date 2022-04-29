@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_inactiviteit"
+            android:icon="@drawable/clock"
+            android:title="@string/menu_inactiviteit" />
+        <item
+            android:id="@+id/nav_hulpmiddelen"
+            android:icon="@drawable/ic_waiting_room_sign"
+            android:title="@string/menu_hulpmiddelen" />
+        <item
+            android:id="@+id/nav_zorgpersoneel"
+            android:icon="@drawable/ic_nurse"
+            android:title="@string/menu_zorgpersoneel" />
+    </group>
+    <group />
+</menu>
